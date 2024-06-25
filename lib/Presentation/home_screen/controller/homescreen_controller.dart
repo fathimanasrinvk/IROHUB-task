@@ -10,7 +10,7 @@ class HomeScreenController with ChangeNotifier{
     var response = await http.get(url);
     if(response.statusCode==200){
       var decodeData = jsonDecode(response.body);
-      print(decodeData);
+      print(decodeData["superheros"]);
     }else{
       print("Api Failed");
     }
